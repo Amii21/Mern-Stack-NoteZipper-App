@@ -15,10 +15,6 @@ function MyNotes({ history, search }) {
   const noteList = useSelector((state) => state.noteList);
   const { loading, error, notes } = noteList;
 
-  // const filteredNotes = notes.filter((note) =>
-  //   note.title.toLowerCase().includes(search.toLowerCase())
-  // );
-
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
@@ -56,7 +52,7 @@ function MyNotes({ history, search }) {
   };
 
   return (
-    <MainScreen title={`Welcome Back ${userInfo && userInfo.name}..`}>
+    <MainScreen title={`Welcome Back ${userInfo && userInfo.name}........`}>
       {console.log(notes)}
       <Link to="/createnote">
         <Button style={{ marginLeft: 10, marginBottom: 6 }} size="lg">
@@ -80,7 +76,6 @@ function MyNotes({ history, search }) {
               <Card style={{ margin: 10 }} key={note._id}>
                 <Card.Header style={{ display: "flex" }}>
                   <span
-                    // onClick={() => ModelShow(note)}
                     style={{
                       color: "black",
                       textDecoration: "none",
